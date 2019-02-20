@@ -1,13 +1,10 @@
-# Entity Framework Core with MySQL
-
-``` 
-Install-Package Microsoft.EntityFrameworkCore -Version 2.1.4
-Install-Package MySql.Data.EntityFrameworkCore -Version 8.0.15
-```
+﻿using Microsoft.EntityFrameworkCore;
+using Data.Model;
 
 
-```C#
-public class DatabaseContext : DbContext
+namespace Data
+{
+    public class DatabaseContext : DbContext
     {
         public DbSet<PersonalInfo> PersonalInfo { get; set; }
 
@@ -28,5 +25,4 @@ public class DatabaseContext : DbContext
 
         }
     }
-```
-
+}
